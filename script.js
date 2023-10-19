@@ -8,7 +8,7 @@ function validateForm() {
     var terms = document.getElementById("terms").checked;
 
     // Simple validation for non-empty fields
-    if (name === "" || email === "" || phone === "" || password === "" || confirmPassword === "" || dob === "" || !terms) {
+    if (name === "" && email === "" && phone === "" && password === "" && confirmPassword === "" && dob === "" && !terms) {
         alert("All fields are required!");
         return false;
     }
@@ -30,6 +30,11 @@ function validateForm() {
     // Validate password and confirm password
     if (password !== confirmPassword) {
         alert("Passwords do not match!");
+        return false;
+    }
+
+    if(password === ''){
+        alert("Passwords Can not be empty!");
         return false;
     }
 
