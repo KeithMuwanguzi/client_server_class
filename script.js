@@ -45,6 +45,11 @@ function validateForm() {
         return false;
     }
 
+    if(!terms){
+        alert("Agree to the terms and conditions!");
+        return false;
+    }
+
     // All validations passed
     return true;
 }
