@@ -11,7 +11,8 @@ DISCONNECTED_MESSAGE = "!DISCONNECTED"
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
-client_messages = []
+clients = []
+aliases = []
 
 
 def handle_client(conn, addr):
@@ -25,11 +26,10 @@ def handle_client(conn, addr):
             msg = conn.recv(msg_length).decode(FORMAT)
             if msg == DISCONNECTED_MESSAGE:
                 connected = False
-                print(f"{addr}: {msg}")
-            else:
-                client_messages.append(f"{addr}:{msg}")
 
+            print(f"{addr}: {msg}")
     conn.close()
+    print(clients)
 
 
 def start():
@@ -37,6 +37,8 @@ def start():
     print(f"[LISTENING] Server is listening on {SERVER}:{PORT}")
     while True:
         conn, addr = server.accept()
+        clients.append(conn)
+        print("[APPENDED] Client has been added")
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"\n[ACTIVE CONNECTIONS] {threading.active_count() - 1}")

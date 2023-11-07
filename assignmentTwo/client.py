@@ -27,4 +27,5 @@ while connected:
     if message == DISCONNECTED_MESSAGE:
         connected = False
     send_message(message)
+
 client.close()
