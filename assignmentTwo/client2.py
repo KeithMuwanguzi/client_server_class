@@ -1,10 +1,10 @@
 import socket
 import threading
 
-PORT = 55555
+PORT = 65000
 SERVER = "192.168.43.203"
 ADDR = (SERVER, PORT)
-FORMAT = "utf-8"
+FORMAT = "ascii"
 DISCONNECTED_MESSAGE = "!DISCONNECTED"
 
 

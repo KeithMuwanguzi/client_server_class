@@ -3,9 +3,9 @@ import threading
 import time
 
 HOST = socket.gethostbyname(socket.gethostname())
-PORT = 55555
+PORT = 65000
 ADDR = (HOST, PORT)
-FORMAT = "utf-8"
+FORMAT = "ascii"
 DISCONNECTED_MESSAGE = "!DISCONNECTED"
 
 
