@@ -2,7 +2,7 @@ import socket
 import threading
 
 PORT = 65000
-SERVER = "192.168.43.203"
+SERVER = "192.168.100.103"
 ADDR = (SERVER, PORT)
 FORMAT = "ascii"
 DISCONNECTED_MESSAGE = "!DISCONNECTED"

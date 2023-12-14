@@ -17,7 +17,7 @@ usernames = []
 
 def bootServer():
     print("[BOOTING]")
-    time.sleep(2)
+    time.sleep(1)
     print("[BOOTING] ....")
     time.sleep(1)
     print("[BOOTING] .......")
@@ -31,7 +31,7 @@ def bootServer():
     print("[BOOTING] ..........................................")
     time.sleep(1)
     print("[STARTING] Server is starting.............................")
-    time.sleep(3)
+    time.sleep(2)
 
 
 def broadcastMessage(message):
