@@ -10,7 +10,7 @@
 <body>
     <div class="success-container">
         <h1>Error Occured</h1>
-        <p>The email you entered already exists</p>
+        <p>The email you entered already exists,login instead</p>
         <p><a href="index.php">Back to Home</a></p>
     </div>
 </body>
