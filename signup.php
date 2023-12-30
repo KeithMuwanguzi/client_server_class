@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="form">
+    <div class="success-container">
         <h1>Registration Form</h1>
         <form method="post" action="authenticate.php" onsubmit="return validateForm()">
             <label for="name">Name:</label>

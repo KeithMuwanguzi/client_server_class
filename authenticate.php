@@ -22,12 +22,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = odbc_exec($conn, $query);
 
     if (!$result) {
-        die("Error executing query: " . odbc_errormsg());
-    }
-    odbc_close($conn);
+        header("Location: error.php");
+        odbc_close($conn);
+        exit();
+    }else {
+        odbc_close($conn);
 
     // Redirect to a success page
-    header("Location: success.php");
-    exit();
+        header("Location: success.php");
+        exit();
+    }
+    
 }
 ?>
